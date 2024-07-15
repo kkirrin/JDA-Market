@@ -29,10 +29,13 @@
     .news-list {
         grid-template-columns: repeat(1, 1fr);
     }
+    .news-list--item {
+        min-height: 320px;
+    }
 }
 
 .news-list--item {
-    width: -webkit-fill-availability;
+    width: -webkit-fill-available;
     border: 1px solid var(--dark-green);
     padding: 20px;
 }

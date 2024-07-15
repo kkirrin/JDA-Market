@@ -12,12 +12,13 @@
     cursor: pointer;
     -webkit-appearence: none;
     -webkit-tap-highlight-color: transparent;
+    z-index: 1000;
 }
 
-.btn__menu--mobile.active {
-    transition: 1s ease;
-    background-color: #fcbc40;
+.btn__menu--mobile.active{
+    top: -104px;
 }
+
 .btn__menu--mobile svg {
     width: 49px;
     height: 48px;
@@ -65,7 +66,7 @@
 
 @media screen and (max-width: 480px) {
     .btn__menu {
-        width: -webkit-fill-available;
+        width: -webkit-fill-available !important;
         display: flex;
         justify-content: center;
     }

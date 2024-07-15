@@ -11,6 +11,10 @@
 @import './block/animateSocialsBtn.css';
 @import './block/oil.css';
 @import './block/news.css';
+@import './block/table.css';
+@import './block/modal.css';
+@import './block/single-list';
+@import './block/map.css';
 
 /* Импорт TailWind */
 @tailwind base;
@@ -71,6 +75,7 @@
         scroll-behavior: smooth;
         scrollbar-width: thin;
         scrollbar-color: var(--green) var(--dark-green);
+        font-family: 'Involve';
     }
 
     body {
@@ -92,6 +97,9 @@
         font-weight: 400;
         color: var(--dark-green);
         font-size: clamp(1.875rem, 0.313rem + 4.167vw, 4.063rem);
+    }
+    p {
+        font-family: 'Involve';
     }
 }
 
@@ -167,6 +175,19 @@
     overflow: hidden;
 }
 
+.text-line {
+    position: relative;
+}
+
+.text-line::before {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    content: '';
+    width: -webkit-fill-available;
+    background-color: var(--dark-green);
+}
+
 .important {
     background-image: url('../src/img/pattern-3.png');
     background-repeat: no-repeat;
@@ -210,22 +231,3 @@
     line-height: 85px !important;
 }
 
-
-.single-list * {transition: .4s linear;}
-.single-list {
-  padding: 0 10px;
-  margin: 0;
-  width: 20%;
-}
-.single-list li {
-  border-bottom: 1px solid #efefef;
-  padding: 10px 0;
-}
-.single-list p {
-  text-decoration: none;
-  color: #555;
-}
-.single-list li {
-    display: flex;
-    justify-content: space-between;
-}

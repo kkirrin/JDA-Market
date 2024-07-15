@@ -29,7 +29,7 @@ export const initNav = () => {
         evt.preventDefault();
         mobileMenuButton.classList.toggle('active');
         mobileMenu.classList.toggle('is-active');
-        // body.classList
+        body.classList.toggle('lock');
     })
 
 
